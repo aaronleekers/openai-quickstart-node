@@ -3,6 +3,22 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
+  const useStyles = makeStyles({
+    root: {
+      maxWidth: 600,
+      margin: "0 auto",
+      padding: 20,
+    },
+    heading: {
+      textAlign: "center",
+      marginBottom: 20,
+    },
+    chatLog: {
+      height: 300,
+      overflowY: "scroll",
+    },
+  });
+
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const classes = useStyles();
